@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import UmbrellaLogo from "./UmbrellaLogo";
 import { Button } from "./ui/button";
@@ -40,8 +41,8 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="default" size="sm">
-              Apply Now
+            <Button variant="default" size="sm" asChild>
+              <Link to="/apply">Apply Now</Link>
             </Button>
           </nav>
 
@@ -71,8 +72,8 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="default" size="sm" className="mt-4 w-full">
-              Apply Now
+            <Button variant="default" size="sm" className="mt-4 w-full" asChild>
+              <Link to="/apply">Apply Now</Link>
             </Button>
           </nav>
         )}

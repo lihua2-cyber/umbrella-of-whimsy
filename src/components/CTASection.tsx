@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AlertTriangle } from "lucide-react";
 
@@ -27,11 +28,13 @@ const CTASection = () => {
             acceptance. Next of kin information required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="default" className="text-lg px-8">
-              Apply for Fall 2025
+            <Button size="lg" variant="default" className="text-lg px-8" asChild>
+              <Link to="/apply">Apply for Spring 2026</Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8">
+            <Button size="lg" variant="outline" className="text-lg px-8" asChild>
+              <a href="mailto:info@umbrella.edu.kg">
               Request Information Packet
+              </a>
             </Button>
           </div>
           <p className="text-xs text-muted-foreground mt-6 italic">
